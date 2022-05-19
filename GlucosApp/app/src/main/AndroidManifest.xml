@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GlucosApp.Light">
         <activity
+            android:name=".view.RegisterActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.LoginActivity"
             android:exported="false" />
         <activity

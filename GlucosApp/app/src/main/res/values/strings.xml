@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GlucosApp</string>
+    <string name="app_name">Glucos App</string>
     <string name="glucos_app">Glucos App</string>
     <string name="logo_app">logo app</string>
     <string name="created_by"><font color="#000000">Created By</font> <font color="#5200FF">Glucos Team</font></string>
@@ -8,4 +8,8 @@
     <string name="login">LOGIN</string>
     <string name="txt_register">Dont have an account?</string>
     <string name="register_here">SIGN UP</string>
+    <string name="create_your_account">Create Your Account</string>
+    <string name="name">Name</string>
+    <string name="register">REGISTER</string>
+    <string name="already_have_an_account">Already have an account?</string>
 </resources>
