@@ -1,4 +1,4 @@
-package com.herdi.yusli.glucosapp.customeView
+package com.herdi.yusli.glucosapp.customView
 
 import android.content.Context
 import android.graphics.Canvas
@@ -9,7 +9,7 @@ import android.view.MotionEvent
 import android.view.View
 import androidx.appcompat.widget.AppCompatEditText
 
-class PasswordEditText : AppCompatEditText, View.OnTouchListener {
+class EmailEditText : AppCompatEditText, View.OnTouchListener {
 
 
     constructor(context: Context) : super(context) {
@@ -45,8 +45,8 @@ class PasswordEditText : AppCompatEditText, View.OnTouchListener {
             }
 
             override fun afterTextChanged(s: Editable) {
-                if (s.toString().length < 6) {
-                    error = "password minimmal 6 karakter"
+                if (!isValidEmail(s.toString())) {
+                    error = "Format email xxx@xx.xxx"
                 }
             }
         })
@@ -59,5 +59,9 @@ class PasswordEditText : AppCompatEditText, View.OnTouchListener {
 
     override fun onTouch(v: View?, event: MotionEvent): Boolean {
         return false
+    }
+
+    private fun isValidEmail(email: CharSequence): Boolean {
+        return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
 }

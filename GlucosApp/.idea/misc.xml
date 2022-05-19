@@ -3,7 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/capstone-project/GlucosApp/app/src/main/res/drawable/ic_baseline_dashboard_24.xml" value="0.1945" />
+        <entry key="..\:/capstone-project/GlucosApp/app/src/main/res/font/.xml" value="0.23958333333333334" />
+        <entry key="..\:/capstone-project/GlucosApp/app/src/main/res/font/acme.xml" value="0.23958333333333334" />
+        <entry key="..\:/capstone-project/GlucosApp/app/src/main/res/font/inter_bold.xml" value="0.23958333333333334" />
+        <entry key="..\:/capstone-project/GlucosApp/app/src/main/res/font/inter_semibold.xml" value="0.23958333333333334" />
         <entry key="..\:/capstone-project/GlucosApp/app/src/main/res/layout/activity_main.xml" value="0.17074275362318841" />
+        <entry key="..\:/capstone-project/GlucosApp/app/src/main/res/layout/activity_splash_screen.xml" value="0.18" />
       </map>
     </option>
   </component>
