@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
-import com.herdi.yusli.glucosapp.MainActivity
 import com.herdi.yusli.glucosapp.databinding.ActivitySplashScreenBinding
 
 @SuppressLint("CustomSplashScreen")
@@ -19,7 +18,7 @@ class SplashScreenActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         Handler(Looper.getMainLooper()).postDelayed({
-            val i = Intent(this, MainActivity::class.java)
+            val i = Intent(this, LoginActivity::class.java)
             startActivity(i)
             finish()
         }, 2000)
