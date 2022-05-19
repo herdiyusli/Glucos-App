@@ -10,13 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GlucosApp.Light">
         <activity
+            android:name=".view.MainActivity"
+            android:exported="false"
+            android:label="@string/title_activity_main" />
+        <activity
             android:name=".view.RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".view.LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".view.SplashScreenActivity"
