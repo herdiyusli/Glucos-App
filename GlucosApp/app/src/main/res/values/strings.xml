@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Glucos App</string>
     <string name="glucos_app">Glucos App</string>
     <string name="logo_app">logo app</string>
@@ -16,4 +16,44 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Diabetes</string>
     <string name="title_notifications">Bantuan</string>
+    <string name="roleDev">Role Dev</string>
+    <string name="foto_developer">foto developer</string>
+    <string name="hubungi_kami_tim_developer">Hubungi Kami - Glucos Team</string>
+
+
+    <string-array name="nameDev">
+        <item>Herdi Yusli</item>
+        <item>Paskalis Sinurat</item>
+        <item>Surya Herdiansyah</item>
+        <item>Mohammad Aldrin Arifin</item>
+        <item>Wahdina Azizah</item>
+        <item>T. Imam Suranda</item>
+    </string-array>
+
+    <string-array name="email">
+        <item>herdi13yyo@gmail.com</item>
+        <item>paskalis0623@gmail.com</item>
+        <item>suryaherdiansyah4@gmail.com</item>
+        <item tools:ignore="Typos">aldrinarifin1@gmail.com</item>
+        <item>wahdinaazizah457@gmail.com</item>
+        <item>imamsuranda@gmail.com</item>
+    </string-array>
+
+    <string-array name="role">
+        <item>Mobile Development</item>
+        <item>Machine Learning</item>
+        <item>Machine Learning</item>
+        <item>Machine Learning</item>
+        <item>Cloud Computing</item>
+        <item>Cloud Computing</item>
+    </string-array>
+
+    <string-array name="foto">
+        <item>@drawable/logo</item>
+        <item>@drawable/logo</item>
+        <item>@drawable/logo</item>
+        <item>@drawable/logo</item>
+        <item>@drawable/logo</item>
+        <item>@drawable/logo</item>
+    </string-array>
 </resources>
