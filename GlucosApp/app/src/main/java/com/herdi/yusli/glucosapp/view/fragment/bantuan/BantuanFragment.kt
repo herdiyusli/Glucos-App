@@ -22,14 +22,8 @@ class BantuanFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        listDevAdapter = ListDevAdapter(list)
-        binding.apply {
-            rvDev.setHasFixedSize(true)
-            rvDev.layoutManager = LinearLayoutManager(activity)
-            rvDev.adapter = listDevAdapter
+        setRecylerView()
 
-        }
-        list.addAll(listDevs)
     }
 
     override fun onCreateView(
@@ -64,6 +58,17 @@ class BantuanFragment : Fragment() {
             }
             return listDev
         }
+
+    private fun setRecylerView() {
+        listDevAdapter = ListDevAdapter(list)
+        binding.apply {
+            rvDev.setHasFixedSize(true)
+            rvDev.layoutManager = LinearLayoutManager(activity)
+            rvDev.adapter = listDevAdapter
+
+        }
+        list.addAll(listDevs)
+    }
 
 
 

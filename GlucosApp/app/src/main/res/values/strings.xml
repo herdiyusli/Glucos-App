@@ -19,6 +19,9 @@
     <string name="roleDev">Role Dev</string>
     <string name="foto_developer">foto developer</string>
     <string name="hubungi_kami_tim_developer">Hubungi Kami - Glucos Team</string>
+    <string name="tipe_diabetes">Tipe Diabetes</string>
+    <string name="penjelasan_tipe_diabtes">Penjelasan Tipe Diabtes</string>
+    <string name="tipe_tipe_diabetes">Tipe - Tipe Diabetes</string>
 
 
     <string-array name="nameDev">
@@ -56,4 +59,22 @@
         <item>@drawable/logo</item>
         <item>@drawable/logo</item>
     </string-array>
+
+    <string-array name="tipeDiabet">
+        <item>Diabetes Tipe 1</item>
+        <item>Diabetes Tipe 2</item>
+        <item>Diabetes Gestasional</item>
+        <item>Diabetes LADA</item>
+        <item>Diabetes MODY</item>
+    </string-array>
+
+
+    <string-array name="descDiabet">
+        <item>Diabetes melitus tipe 1 adalah jenis penyakit autoimun yang menyebabkan pankreas, organ yang memproduksi hormon insulin mengalami kerusakan. Hal ini menyebabkan tubuh tidak bisa menghasilkan insulin, padahal hormon tersebut dibutuhkan untuk mengolah gula darah menjadi energi. \n\nDiabetes jenis ini bisa dijumpai sejak masa anak-anak. Dan, untuk mengatasi gula darah yang terlalu tinggi, penderita diabetes melitus tipe 1 harus mendapatkan suntikan insulin setiap hari.</item>
+        <item>Berbeda dengan tipe 1 yang terjadi mulai anak-anak, diabetes melitus tipe 2 terjadi pada orang dewasa dan lanjut usia. Jenis diabetes ini terjadi karena adanya resistensi insulin. \n\nPada awalnya, kondisi resistensi insulin bisa diatasi oleh tubuh dengan menghasilkan lebih banyak insulin untuk menjaga gula darah normal. Tapi lama-kelamaan, pankreas mengalami kelelahan akibat memproduksi insulin dalam jumlah yang banyak. \n\nAkibatnya, organ tersebut tak mampu lagi menghasilkan jumlah insulin yang memadai sehingga tubuh tidak mampu mengelola gula darah untuk diubah menjadi energi. Saat itulah penyakit diabetes terjadi.</item>
+        <item>Ini adalah jenis diabetes yang terjadi pada kehamilan. Umumnya, diabetes gestasional mulai terjadi pada usia kehamilan 24–28 minggu, dan ditandai dengan gula darah setelah makan yang tinggi. \n\nDiabetes gestasional harus ditangani dengan baik untuk mencegah berbagai komplikasi dalam kehamilan dan menurunkan risiko terjadinya persalinan prematur, bayi yang terlalu besar, atau gula darah yang rendah pada bayi saat lahir.</item>
+        <item>LADA merupakan singkatan dari latent autoimmune diabetes of adulthood. Secara sederhana, LADA serupa dengan diabetes melitus tipe 1 yang baru muncul saat seseorang sudah dewasa. Umumnya penyakit ini terjadi saat seseorang berusia 30 tahun ke atas. \n\nPada awal pengobatan, LADA bisa diobati dengan obat-obatan diabetes tablet. Namun secara jangka panjang, penderitanya membutuhkan suntikan insulin guna mengontrol kadar gula darah di dalam tubuhnya.</item>
+        <item>Kepanjangan MODY adalah maturity onset diabetes of the young. Penyebab dan gejala MODY mirip dengan diabetes melitus tipe 2, namun terdapat dua hal yang membedakannya. \n\nPertama, MODY umumnya terjadi sebelum seseorang berusia 25 tahun (remaja). Kedua, MODY biasanya merupakan bagian dari penyakit yang diturunkan dari orang tua ke anak, karena kondisi ini biasanya disebabkan oleh mutasi genetik. Oleh karena itu, jika ayah atau ibu mengalami MODY, anak akan memiliki risiko 50% lebih tinggi untuk mengalami penyakit yang sama.</item>
+    </string-array>
+
 </resources>

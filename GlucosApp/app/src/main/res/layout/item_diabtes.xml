@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="6dp"
+    android:backgroundTint="@color/bitGrey"
+    card_view:cardCornerRadius="4dp">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLyt"
+        android:orientation="vertical"
+        android:padding="8dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tipe_tipe"
+            android:text="@string/tipe_diabetes"
+            android:textColor="@color/black"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:fontFamily="@font/inter_bold"
+            android:textSize="16sp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/expand_item"
+            android:layout_marginTop="8dp"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/penjelasan_tv"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="@string/penjelasan_tipe_diabtes"
+                android:textColor="@color/black"
+                android:fontFamily="@font/inter"
+                android:textSize="14sp"/>
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
