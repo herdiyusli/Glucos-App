@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/capstone-project/GlucosApp/app/src/main/res/drawable/bg_blm.xml" value="0.1" />
+        <entry key="..\:/capstone-project/GlucosApp/app/src/main/res/drawable/bg_done.xml" value="0.1" />
+        <entry key="..\:/capstone-project/GlucosApp/app/src/main/res/drawable/bg_tv.xml" value="0.1565" />
         <entry key="..\:/capstone-project/GlucosApp/app/src/main/res/drawable/ic_baseline_dashboard_24.xml" value="0.1945" />
         <entry key="..\:/capstone-project/GlucosApp/app/src/main/res/drawable/ic_baseline_support_agent_24.xml" value="0.1" />
         <entry key="..\:/capstone-project/GlucosApp/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.1945" />
@@ -17,7 +20,7 @@
         <entry key="..\:/capstone-project/GlucosApp/app/src/main/res/layout/fragment_bantuan.xml" value="0.18047673098751418" />
         <entry key="..\:/capstone-project/GlucosApp/app/src/main/res/layout/fragment_dashboard.xml" value="0.17074275362318841" />
         <entry key="..\:/capstone-project/GlucosApp/app/src/main/res/layout/fragment_diabetes.xml" value="0.25" />
-        <entry key="..\:/capstone-project/GlucosApp/app/src/main/res/layout/fragment_home.xml" value="0.15" />
+        <entry key="..\:/capstone-project/GlucosApp/app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="..\:/capstone-project/GlucosApp/app/src/main/res/layout/item_diabtes.xml" value="0.11072664359861592" />
         <entry key="..\:/capstone-project/GlucosApp/app/src/main/res/layout/item_list_dev.xml" value="0.25" />
         <entry key="..\:/capstone-project/GlucosApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.209375" />

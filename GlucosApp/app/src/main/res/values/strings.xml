@@ -22,7 +22,18 @@
     <string name="tipe_diabetes">Tipe Diabetes</string>
     <string name="penjelasan_tipe_diabtes">Penjelasan Tipe Diabtes</string>
     <string name="tipe_tipe_diabetes">Tipe - Tipe Diabetes</string>
-
+    <string name="nama_user">Nama User</string>
+    <string name="logout">LOGOUT</string>
+    <string name="iconprofile">iconProfile</string>
+    <string name="berisi_penjelasan"><big><b><font color="#000000">Yuk Kenali Diabetes</font></b></big>\n\nDiabetes adalah penyakit kronis yang ditandai dengan ciri-ciri berupa tingginya kadar gula (glukosa) darah. Glukosa merupakan sumber energi utama bagi sel tubuh manusia. \n\nGlukosa yang menumpuk di dalam darah akibat tidak diserap sel tubuh dengan baik dapat menimbulkan berbagai gangguan organ tubuh. Jika diabetes tidak dikontrol dengan baik, dapat timbul berbagai komplikasi yang membahayakan nyawa penderita.</string>
+    <string name="yuk_kenali_diabetes">Yuk Kenali Diabetes</string>
+    <string name="txt_deteksi">Deteksi dini potensi diabtes pada diri anda.</string>
+    <string name="mulai_deteksi">Mulai Deteksi</string>
+    <string name="deteksi_diabetes">Deteksi Diabetes</string>
+    <string name="catatan_minum_obat">Catatan Minum Obat</string>
+    <string name="set_alarm">Set Alarm</string>
+    <string name="catatan_minum_obat_harian_anda">Catatan minum obat harian, ketuk button untuk merubah status. Catatan akan otomatis reset setiap hari.</string>
+    <string name="pagiTxt"><big><b>PAGI</b></big>\nBelum Diminum</string>
 
     <string-array name="nameDev">
         <item>Herdi Yusli</item>
