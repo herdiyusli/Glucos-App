@@ -3,201 +3,253 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".view.fragment.home.HomeFragment">
 
-    <TextView
-        android:id="@+id/TvNama"
-        android:layout_width="wrap_content"
+    <FrameLayout
+        android:id="@+id/frame_lyt"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:drawablePadding="6dp"
-        android:fontFamily="@font/inter_bold"
-        android:gravity="center_vertical"
-        android:text="@string/nama_user"
-        android:textAllCaps="true"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="@+id/imageView2" />
-
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:background="@drawable/ic_baseline_account_circle_24"
-        android:backgroundTint="@color/blue_purp"
-        android:contentDescription="@string/iconprofile"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.08"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.04000002" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/btn_logout"
-        android:layout_width="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/TvNama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:drawablePadding="6dp"
+                android:fontFamily="@font/inter_bold"
+                android:gravity="center_vertical"
+                android:text="@string/nama_user"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/ic_baseline_account_circle_24"
+                android:backgroundTint="@color/blue_purp"
+                android:contentDescription="@string/iconprofile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:backgroundTint="@color/blue_purp"
+                android:fontFamily="@font/inter_bold"
+                android:text="@string/logout"
+                android:textAllCaps="true"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/blue_purp"
-        android:fontFamily="@font/inter_bold"
-        android:text="@string/logout"
-        android:textAllCaps="true"
-        app:layout_constraintBottom_toBottomOf="@+id/TvNama"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintStart_toEndOf="@+id/TvNama"
-        app:layout_constraintTop_toTopOf="@+id/TvNama" />
+        app:layout_constraintStart_toStartOf="@+id/frame_lyt"
+        app:layout_constraintTop_toBottomOf="@+id/frame_lyt">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:isScrollContainer="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="150dp">
 
 
-    <TextView
-        android:id="@+id/desc_diabetes"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/bg_tv"
-        android:fontFamily="@font/inter"
-        android:padding="10dp"
-        android:text="@string/berisi_penjelasan"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/btn_logout"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+                <TextView
+                    android:id="@+id/desc_diabetes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_tv"
+                    android:fontFamily="@font/inter"
+                    android:padding="10dp"
+                    android:text="@string/berisi_penjelasan"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/deteksiTittle"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/inter_bold"
-        android:text="@string/deteksi_diabetes"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/desc_diabetes"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/desc_diabetes"
-        app:layout_constraintTop_toBottomOf="@+id/desc_diabetes" />
+                <TextView
+                    android:id="@+id/deteksiTittle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="@string/deteksi_diabetes"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@+id/desc_diabetes"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/desc_diabetes"
+                    app:layout_constraintTop_toBottomOf="@+id/desc_diabetes" />
 
-    <TextView
-        android:id="@+id/deteksiTv"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/inter"
-        android:text="@string/txt_deteksi"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/desc_diabetes"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/desc_diabetes"
-        app:layout_constraintTop_toBottomOf="@+id/deteksiTittle" />
+                <TextView
+                    android:id="@+id/deteksiTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/inter"
+                    android:text="@string/txt_deteksi"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@+id/desc_diabetes"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/desc_diabetes"
+                    app:layout_constraintTop_toBottomOf="@+id/deteksiTittle" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="@color/orange"
-        android:fontFamily="@font/inter_bold"
-        android:text="@string/mulai_deteksi"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/deteksiTv"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/deteksiTv"
-        app:layout_constraintTop_toBottomOf="@+id/deteksiTv" />
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@color/orange"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="@string/mulai_deteksi"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@+id/deteksiTv"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/deteksiTv"
+                    app:layout_constraintTop_toBottomOf="@+id/deteksiTv" />
 
-    <TextView
-        android:id="@+id/obatTv"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/inter_bold"
-        android:text="@string/catatan_minum_obat"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/desc_diabetes"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/desc_diabetes"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+                <TextView
+                    android:id="@+id/obatTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="@string/catatan_minum_obat"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@+id/desc_diabetes"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/desc_diabetes"
+                    app:layout_constraintTop_toBottomOf="@+id/button" />
 
-    <TextView
-        android:id="@+id/txtBtnAlarm"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/inter_bold"
-        android:text="@string/set_alarm"
-        android:textColor="@color/blue_purp"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/obatTv"
-        app:layout_constraintEnd_toEndOf="@+id/desc_diabetes"
-        app:layout_constraintTop_toTopOf="@+id/obatTv" />
+                <TextView
+                    android:id="@+id/txtBtnAlarm"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="@string/set_alarm"
+                    android:textColor="@color/blue_purp"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/obatTv"
+                    app:layout_constraintEnd_toEndOf="@+id/desc_diabetes"
+                    app:layout_constraintTop_toTopOf="@+id/obatTv" />
 
-    <TextView
-        android:id="@+id/alarmTv"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/inter"
-        android:text="@string/catatan_minum_obat_harian_anda"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/obatTv"
-        app:layout_constraintStart_toStartOf="@+id/obatTv"
-        app:layout_constraintTop_toBottomOf="@+id/obatTv" />
+                <TextView
+                    android:id="@+id/alarmTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/inter"
+                    android:text="@string/catatan_minum_obat_harian_anda"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@+id/obatTv"
+                    app:layout_constraintStart_toStartOf="@+id/obatTv"
+                    app:layout_constraintTop_toBottomOf="@+id/obatTv" />
 
-    <TextView
-        android:id="@+id/pagiTv"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/bg_done"
-        android:fontFamily="@font/inter"
-        android:gravity="center"
-        android:padding="2dp"
-        android:text="@string/pagiTxt"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="@+id/alarmTv"
-        app:layout_constraintTop_toBottomOf="@+id/alarmTv" />
+                <TextView
+                    android:id="@+id/pagiTv"
+                    android:layout_width="100dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_done"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:text="@string/pagiTxt"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@+id/alarmTv"
+                    app:layout_constraintTop_toBottomOf="@+id/alarmTv" />
 
 
-    <TextView
-        android:id="@+id/siangTv"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/bg_blm"
-        android:textSize="12sp"
-        android:fontFamily="@font/inter"
-        android:gravity="center"
-        android:padding="2dp"
-        android:text="@string/pagiTxt"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/alarmTv"
-        app:layout_constraintStart_toStartOf="@+id/alarmTv"
-        app:layout_constraintTop_toBottomOf="@+id/alarmTv" />
+                <TextView
+                    android:id="@+id/siangTv"
+                    android:layout_width="100dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_blm"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:text="@string/pagiTxt"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="@+id/alarmTv"
+                    app:layout_constraintStart_toStartOf="@+id/alarmTv"
+                    app:layout_constraintTop_toBottomOf="@+id/alarmTv" />
 
-    <TextView
-        android:id="@+id/malamTv"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/bg_blm"
-        android:fontFamily="@font/inter"
-        android:textSize="12sp"
-        android:gravity="center"
-        android:padding="2dp"
-        android:text="@string/pagiTxt"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/alarmTv"
-        app:layout_constraintTop_toBottomOf="@+id/alarmTv" />
+                <TextView
+                    android:id="@+id/malamTv"
+                    android:layout_width="100dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_blm"
+                    android:fontFamily="@font/inter"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:text="@string/pagiTxt"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="@+id/alarmTv"
+                    app:layout_constraintTop_toBottomOf="@+id/alarmTv" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+    </FrameLayout>
+
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
