@@ -35,6 +35,15 @@
     <string name="catatan_minum_obat_harian_anda">Catatan minum obat harian, ketuk button untuk merubah status. Catatan akan otomatis reset setiap hari.</string>
     <string name="pagiTxt"><big><b>PAGI</b></big>\nBelum Diminum</string>
 
+
+    <string name="alarm_message">Pesan Alarm</string>
+    <string name="repeating_alarm">Repeating Alarm</string>
+    <string name="set_repeating_alarm">Set Alarm</string>
+    <string name="cancel_alarm">Batalkan Alarm</string>
+    <string name="pagi">Pagi</string>
+    <string name="_08_00">08:00</string>
+    <string name="ketuk_waktu_untuk_setting_alarm">Ketuk waktu untuk setting alarm</string>
+
     <string-array name="nameDev">
         <item>Herdi Yusli</item>
         <item>Paskalis Sinurat</item>

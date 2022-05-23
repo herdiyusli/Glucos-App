@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.herdi.yusli.glucosapp.databinding.FragmentHomeBinding
+import com.herdi.yusli.glucosapp.view.AlarmActivity
 import com.herdi.yusli.glucosapp.view.LoginActivity
 
 
@@ -30,6 +31,12 @@ class HomeFragment : Fragment() {
 
         binding.btnLogout.setOnClickListener {
             val intent = Intent(activity, LoginActivity::class.java)
+            startActivity(intent)
+            requireActivity().finish()
+        }
+
+        binding.txtBtnAlarm.setOnClickListener {
+            val intent = Intent(activity, AlarmActivity::class.java)
             startActivity(intent)
             requireActivity().finish()
         }
