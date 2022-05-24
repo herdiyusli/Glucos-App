@@ -42,7 +42,11 @@
     <string name="cancel_alarm">Batalkan Alarm</string>
     <string name="pagi">Pagi</string>
     <string name="_08_00">08:00</string>
-    <string name="ketuk_waktu_untuk_setting_alarm">Ketuk waktu untuk setting alarm</string>
+    <string name="ketuk_waktu_untuk_setting_alarm">Ketuk untuk pilih waktu untuk setting alarm terlebih dahulu</string>
+    <string name="_12_00">12:00</string>
+    <string name="siang">Siang</string>
+    <string name="_20_00">20:00</string>
+    <string name="malam">Malam</string>
 
     <string-array name="nameDev">
         <item>Herdi Yusli</item>

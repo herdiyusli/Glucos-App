@@ -38,7 +38,6 @@ class HomeFragment : Fragment() {
         binding.txtBtnAlarm.setOnClickListener {
             val intent = Intent(activity, AlarmActivity::class.java)
             startActivity(intent)
-            requireActivity().finish()
         }
 
 
