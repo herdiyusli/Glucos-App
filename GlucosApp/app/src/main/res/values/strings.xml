@@ -32,7 +32,7 @@
     <string name="deteksi_diabetes">Deteksi Diabetes</string>
     <string name="catatan_minum_obat">Catatan Minum Obat</string>
     <string name="set_alarm">Set Alarm</string>
-    <string name="catatan_minum_obat_harian_anda">Catatan minum obat harian, ketuk button untuk merubah status. Catatan akan otomatis reset setiap hari.</string>
+    <string name="catatan_minum_obat_harian_anda">Catatan minum obat harian, ketuk button untuk merubah status. \n\nCatatan akan otomatis direset setiap hari, namun jika terjadi kesalahan anda dapat menggunakan button reset.</string>
     <string name="pagiBelumTxt"><big><b>PAGI</b></big>\nBelum Diminum</string>
     <string name="siangBelumTxt"><big><b>SIANG</b></big>\nBelum Diminum</string>
     <string name="malamBelumTxt"><big><b>MALAM</b></big>\nBelum Diminum</string>
@@ -53,6 +53,7 @@
     <string name="siang">Siang</string>
     <string name="_20_00">20:00</string>
     <string name="malam">Malam</string>
+    <string name="reset_catatan_obat">Reset Catatan Obat</string>
 
     <string-array name="nameDev">
         <item>Herdi Yusli</item>

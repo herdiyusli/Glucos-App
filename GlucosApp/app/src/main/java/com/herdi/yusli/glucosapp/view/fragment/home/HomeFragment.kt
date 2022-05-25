@@ -3,7 +3,6 @@ package com.herdi.yusli.glucosapp.view.fragment.home
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -76,20 +75,33 @@ class HomeFragment : Fragment() {
             homeViewModel.saveObatMalam(Malam(tanggalHariIni, true))
         }
 
-//        testing delete data pada datastore
-//        binding.descDiabetes.setOnClickListener {
-//            val date = 0
-//            homeViewModel.saveObatPagi(Pagi(date, false))
-//            homeViewModel.saveObatSiang(Siang(date, false))
-//            homeViewModel.saveObatMalam(Malam(date, false))
-//        }
+        binding.ResetBtn.setOnClickListener {
+            val date = 0
+            homeViewModel.saveObatPagi(Pagi(date, false))
+            homeViewModel.saveObatSiang(Siang(date, false))
+            homeViewModel.saveObatMalam(Malam(date, false))
+        }
 
         homeViewModel.getObatPagi().observe(viewLifecycleOwner)
         { pagi: Pagi ->
             if (pagi.createdAt != tanggalHariIni) {
                 val date = 0
                 homeViewModel.saveObatPagi(Pagi(date, false))
+            }
+        }
+
+        homeViewModel.getObatSiang().observe(viewLifecycleOwner)
+        { siang: Siang ->
+            if (siang.createdAt != tanggalHariIni) {
+                val date = 0
                 homeViewModel.saveObatSiang(Siang(date, false))
+            }
+        }
+
+        homeViewModel.getObatMalam().observe(viewLifecycleOwner)
+        { malam: Malam ->
+            if (malam.createdAt != tanggalHariIni) {
+                val date = 0
                 homeViewModel.saveObatMalam(Malam(date, false))
             }
         }
@@ -114,7 +126,6 @@ class HomeFragment : Fragment() {
                 if (siang.Status) {
                     siangTv.setBackgroundResource(R.drawable.bg_done)
                     siangTv.text = resources.getString(R.string.siangSudahTxt)
-                    Log.d("","${siang.Status}")
                 } else {
                     siangTv.setBackgroundResource(R.drawable.bg_blm)
                     siangTv.text = resources.getString(R.string.siangBelumTxt)
@@ -127,7 +138,6 @@ class HomeFragment : Fragment() {
                 if (malam.Status) {
                     malamTv.setBackgroundResource(R.drawable.bg_done)
                     malamTv.text = resources.getString(R.string.malamSudahTxt)
-                    Log.d("","tes ${malam.Status}")
                 } else {
                     malamTv.setBackgroundResource(R.drawable.bg_blm)
                     malamTv.text = resources.getString(R.string.malamBelumTxt)

@@ -2,6 +2,7 @@
 
 package com.herdi.yusli.glucosapp.alarm
 
+import android.annotation.SuppressLint
 import android.app.AlarmManager
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -15,9 +16,11 @@ import android.widget.Toast
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import com.herdi.yusli.glucosapp.R
+import com.herdi.yusli.glucosapp.view.LoginActivity
 import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.*
+
 
 class AlarmReceiver : BroadcastReceiver() {
 
@@ -59,11 +62,27 @@ class AlarmReceiver : BroadcastReceiver() {
         }
     }
 
-    private fun showAlarmNotification(context: Context, title: String, message: String, notifId: Int) {
+    @SuppressLint("UnspecifiedImmutableFlag")
+    private fun showAlarmNotification(
+        context: Context,
+        title: String,
+        message: String,
+        notifId: Int
+    ) {
         val channelId = "Channel_1"
         val channelName = "AlarmManager channel"
-        val notificationManagerCompat = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        val notificationManagerCompat =
+            context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         val alarmSound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
+        val loginIntent = Intent(context, LoginActivity::class.java)
+        val pendingIntent = PendingIntent.getActivity(
+            context,
+            0,
+            loginIntent,
+            PendingIntent.FLAG_CANCEL_CURRENT
+        )
+
+
         val builder = NotificationCompat.Builder(context, channelId)
             .setSmallIcon(R.drawable.logo)
             .setContentTitle(title)
@@ -71,10 +90,15 @@ class AlarmReceiver : BroadcastReceiver() {
             .setColor(ContextCompat.getColor(context, android.R.color.transparent))
             .setVibrate(longArrayOf(1000, 1000, 1000, 1000, 1000))
             .setSound(alarmSound)
+            .setContentIntent(pendingIntent)
+            .setAutoCancel(true)
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val channel = NotificationChannel(channelId,
+            val channel = NotificationChannel(
+                channelId,
                 channelName,
-                NotificationManager.IMPORTANCE_DEFAULT)
+                NotificationManager.IMPORTANCE_DEFAULT
+            )
             channel.enableVibration(true)
             channel.vibrationPattern = longArrayOf(1000, 1000, 1000, 1000, 1000)
             builder.setChannelId(channelId)
@@ -94,8 +118,14 @@ class AlarmReceiver : BroadcastReceiver() {
         calendar.set(Calendar.HOUR_OF_DAY, Integer.parseInt(timeArray[0]))
         calendar.set(Calendar.MINUTE, Integer.parseInt(timeArray[1]))
         calendar.set(Calendar.SECOND, 0)
-        val pendingIntent = PendingIntent.getBroadcast(context, ID_REPEATING, intent, PendingIntent.FLAG_IMMUTABLE)
-        alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, calendar.timeInMillis, AlarmManager.INTERVAL_DAY, pendingIntent)
+        val pendingIntent =
+            PendingIntent.getBroadcast(context, ID_REPEATING, intent, PendingIntent.FLAG_IMMUTABLE)
+        alarmManager.setInexactRepeating(
+            AlarmManager.RTC_WAKEUP,
+            calendar.timeInMillis,
+            AlarmManager.INTERVAL_DAY,
+            pendingIntent
+        )
         Toast.makeText(context, "Alarm Obat Diaktifkan", Toast.LENGTH_SHORT).show()
     }
 
@@ -103,7 +133,8 @@ class AlarmReceiver : BroadcastReceiver() {
         val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
         val intent = Intent(context, AlarmReceiver::class.java)
         val requestCode = ID_REPEATING
-        val pendingIntent = PendingIntent.getBroadcast(context, requestCode, intent, PendingIntent.FLAG_IMMUTABLE)
+        val pendingIntent =
+            PendingIntent.getBroadcast(context, requestCode, intent, PendingIntent.FLAG_IMMUTABLE)
         pendingIntent.cancel()
         alarmManager.cancel(pendingIntent)
         Toast.makeText(context, "Alarm Obat Dibatalkan", Toast.LENGTH_SHORT).show()
@@ -119,8 +150,14 @@ class AlarmReceiver : BroadcastReceiver() {
         calendar.set(Calendar.HOUR_OF_DAY, Integer.parseInt(timeArray[0]))
         calendar.set(Calendar.MINUTE, Integer.parseInt(timeArray[1]))
         calendar.set(Calendar.SECOND, 0)
-        val pendingIntent = PendingIntent.getBroadcast(context, ID_REPEATING2, intent, PendingIntent.FLAG_IMMUTABLE)
-        alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, calendar.timeInMillis, AlarmManager.INTERVAL_DAY, pendingIntent)
+        val pendingIntent =
+            PendingIntent.getBroadcast(context, ID_REPEATING2, intent, PendingIntent.FLAG_IMMUTABLE)
+        alarmManager.setInexactRepeating(
+            AlarmManager.RTC_WAKEUP,
+            calendar.timeInMillis,
+            AlarmManager.INTERVAL_DAY,
+            pendingIntent
+        )
         Toast.makeText(context, "Alarm Obat Diaktifkan", Toast.LENGTH_SHORT).show()
     }
 
@@ -128,7 +165,8 @@ class AlarmReceiver : BroadcastReceiver() {
         val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
         val intent = Intent(context, AlarmReceiver::class.java)
         val requestCode = ID_REPEATING2
-        val pendingIntent = PendingIntent.getBroadcast(context, requestCode, intent, PendingIntent.FLAG_IMMUTABLE)
+        val pendingIntent =
+            PendingIntent.getBroadcast(context, requestCode, intent, PendingIntent.FLAG_IMMUTABLE)
         pendingIntent.cancel()
         alarmManager.cancel(pendingIntent)
         Toast.makeText(context, "Alarm Obat Dibatalkan", Toast.LENGTH_SHORT).show()
@@ -144,8 +182,14 @@ class AlarmReceiver : BroadcastReceiver() {
         calendar.set(Calendar.HOUR_OF_DAY, Integer.parseInt(timeArray[0]))
         calendar.set(Calendar.MINUTE, Integer.parseInt(timeArray[1]))
         calendar.set(Calendar.SECOND, 0)
-        val pendingIntent = PendingIntent.getBroadcast(context, ID_REPEATING3, intent, PendingIntent.FLAG_IMMUTABLE)
-        alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, calendar.timeInMillis, AlarmManager.INTERVAL_DAY, pendingIntent)
+        val pendingIntent =
+            PendingIntent.getBroadcast(context, ID_REPEATING3, intent, PendingIntent.FLAG_IMMUTABLE)
+        alarmManager.setInexactRepeating(
+            AlarmManager.RTC_WAKEUP,
+            calendar.timeInMillis,
+            AlarmManager.INTERVAL_DAY,
+            pendingIntent
+        )
         Toast.makeText(context, "Alarm Obat Diaktifkan", Toast.LENGTH_SHORT).show()
     }
 
@@ -153,7 +197,8 @@ class AlarmReceiver : BroadcastReceiver() {
         val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
         val intent = Intent(context, AlarmReceiver::class.java)
         val requestCode = ID_REPEATING3
-        val pendingIntent = PendingIntent.getBroadcast(context, requestCode, intent, PendingIntent.FLAG_IMMUTABLE)
+        val pendingIntent =
+            PendingIntent.getBroadcast(context, requestCode, intent, PendingIntent.FLAG_IMMUTABLE)
         pendingIntent.cancel()
         alarmManager.cancel(pendingIntent)
         Toast.makeText(context, "Alarm Obat Dibatalkan", Toast.LENGTH_SHORT).show()
