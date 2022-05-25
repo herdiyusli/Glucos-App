@@ -1,6 +1,7 @@
 package com.herdi.yusli.glucosapp.view
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -26,6 +27,7 @@ class AlarmActivity : AppCompatActivity(), View.OnClickListener,
     private var binding: ActivityAlarmBinding? = null
     private lateinit var alarmReceiver: AlarmReceiver
     private lateinit var viewModel: AlarmViewModel
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -76,6 +78,10 @@ class AlarmActivity : AppCompatActivity(), View.OnClickListener,
                 { alarm: Alarm ->
                     viewModel.saveAlarm(Alarm(repeatTime, alarm.jamSiang, alarm.jamMalam))
                 }
+                val intent = Intent(this, AlarmActivity::class.java)
+                startActivity(intent)
+                overridePendingTransition(0, 0)
+                finish()
             }
             R.id.btn_cancel_repeating_alarm -> alarmReceiver.cancelAlarm(this)
 
@@ -91,6 +97,10 @@ class AlarmActivity : AppCompatActivity(), View.OnClickListener,
                 { alarm: Alarm ->
                     viewModel.saveAlarm(Alarm(alarm.jamPagi, repeatTime, alarm.jamMalam))
                 }
+                val intent = Intent(this, AlarmActivity::class.java)
+                startActivity(intent)
+                overridePendingTransition(0, 0)
+                finish()
             }
             R.id.btn_cancel_repeating_alarm2 -> alarmReceiver.cancelAlarm2(this)
 
@@ -106,6 +116,10 @@ class AlarmActivity : AppCompatActivity(), View.OnClickListener,
                 { alarm: Alarm ->
                     viewModel.saveAlarm(Alarm(alarm.jamPagi, alarm.jamSiang, repeatTime))
                 }
+                val intent = Intent(this, AlarmActivity::class.java)
+                startActivity(intent)
+                overridePendingTransition(0, 0)
+                finish()
             }
             R.id.btn_cancel_repeating_alarm3 -> alarmReceiver.cancelAlarm3(this)
         }

@@ -1,8 +1,12 @@
 package com.herdi.yusli.glucosapp.data
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class Alarm(
-    val jamPagi: String,
-    val jamSiang: String,
-    val jamMalam: String
-)
+    var jamPagi: String,
+    var jamSiang: String,
+    var jamMalam: String
+) : Parcelable
 

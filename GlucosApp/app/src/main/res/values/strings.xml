@@ -33,7 +33,13 @@
     <string name="catatan_minum_obat">Catatan Minum Obat</string>
     <string name="set_alarm">Set Alarm</string>
     <string name="catatan_minum_obat_harian_anda">Catatan minum obat harian, ketuk button untuk merubah status. Catatan akan otomatis reset setiap hari.</string>
-    <string name="pagiTxt"><big><b>PAGI</b></big>\nBelum Diminum</string>
+    <string name="pagiBelumTxt"><big><b>PAGI</b></big>\nBelum Diminum</string>
+    <string name="siangBelumTxt"><big><b>SIANG</b></big>\nBelum Diminum</string>
+    <string name="malamBelumTxt"><big><b>MALAM</b></big>\nBelum Diminum</string>
+
+    <string name="pagiSudahTxt"><big><b>PAGI</b></big>\nSudah Diminum</string>
+    <string name="siangSudahTxt"><big><b>SIANG</b></big>\nSudah Diminum</string>
+    <string name="malamSudahTxt"><big><b>MALAM</b></big>\nSudah Diminum</string>
 
 
     <string name="alarm_message">Pesan Alarm</string>
