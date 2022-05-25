@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/capstone-project/GlucosApp/app/src/main/res/drawable/bg_blm.xml" value="0.1" />
         <entry key="..\:/capstone-project/GlucosApp/app/src/main/res/drawable/bg_done.xml" value="0.1" />
+        <entry key="..\:/capstone-project/GlucosApp/app/src/main/res/drawable/bg_pertanyaan.xml" value="0.1" />
         <entry key="..\:/capstone-project/GlucosApp/app/src/main/res/drawable/bg_tv.xml" value="0.1565" />
         <entry key="..\:/capstone-project/GlucosApp/app/src/main/res/drawable/ic_baseline_dashboard_24.xml" value="0.1945" />
         <entry key="..\:/capstone-project/GlucosApp/app/src/main/res/drawable/ic_baseline_support_agent_24.xml" value="0.1" />
@@ -14,6 +15,9 @@
         <entry key="..\:/capstone-project/GlucosApp/app/src/main/res/font/inter_bold.xml" value="0.23958333333333334" />
         <entry key="..\:/capstone-project/GlucosApp/app/src/main/res/font/inter_semibold.xml" value="0.23958333333333334" />
         <entry key="..\:/capstone-project/GlucosApp/app/src/main/res/layout/activity_alarm.xml" value="0.22" />
+        <entry key="..\:/capstone-project/GlucosApp/app/src/main/res/layout/activity_detection.xml" value="0.18193548387096775" />
+        <entry key="..\:/capstone-project/GlucosApp/app/src/main/res/layout/activity_hasil.xml" value="0.33" />
+        <entry key="..\:/capstone-project/GlucosApp/app/src/main/res/layout/activity_hasilpos.xml" value="0.16" />
         <entry key="..\:/capstone-project/GlucosApp/app/src/main/res/layout/activity_login.xml" value="0.18" />
         <entry key="..\:/capstone-project/GlucosApp/app/src/main/res/layout/activity_main.xml" value="0.17074275362318841" />
         <entry key="..\:/capstone-project/GlucosApp/app/src/main/res/layout/activity_register.xml" value="0.16" />

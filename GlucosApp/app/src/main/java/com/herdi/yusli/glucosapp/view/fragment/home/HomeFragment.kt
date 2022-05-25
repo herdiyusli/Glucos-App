@@ -19,6 +19,7 @@ import com.herdi.yusli.glucosapp.databinding.FragmentHomeBinding
 import com.herdi.yusli.glucosapp.preference.HomePreference
 import com.herdi.yusli.glucosapp.preference.HomeVMFactory
 import com.herdi.yusli.glucosapp.view.AlarmActivity
+import com.herdi.yusli.glucosapp.view.DetectionActivity
 import com.herdi.yusli.glucosapp.view.LoginActivity
 import java.util.*
 
@@ -57,6 +58,14 @@ class HomeFragment : Fragment() {
             startActivity(intent)
             requireActivity().finish()
         }
+
+        binding.buttonDeteksi.setOnClickListener {
+            val intent = Intent(activity, DetectionActivity::class.java)
+            startActivity(intent)
+        }
+
+
+
 
         binding.txtBtnAlarm.setOnClickListener {
             val intent = Intent(activity, AlarmActivity::class.java)

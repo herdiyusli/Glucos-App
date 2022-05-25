@@ -54,6 +54,24 @@
     <string name="_20_00">20:00</string>
     <string name="malam">Malam</string>
     <string name="reset_catatan_obat">Reset Catatan Obat</string>
+    <string name="deteksi_potensi_diabetes">Deteksi Potensi Diabetes</string>
+    <string name="apakah_anda_pernah_merasakan_gejala_gejala_seperti_dibawah_ini">Apakah anda pernah merasakan gejala seperti dibawah ini :</string>
+    <string name="pertanyaan_diabetes">Pertanyaan Diabetes</string>
+    <string name="iya">Iya</string>
+    <string name="masukan_umur_anda_terlebih_dahulu">Masukan umur anda terlebih dahulu</string>
+    <string name="pria">Pria</string>
+    <string name="wanita">Wanita</string>
+    <string name="pilih_gender">Pilih Gender :</string>
+    <string name="pastikan_untuk_mengisi_data_diatas_dengan_benar_dan_sesuai_dengan_diri_anda">Pastikan untuk mengisi data diatas dengan benar dan sesuai dengan diri anda</string>
+    <string name="hasil">Hasil</string>
+    <string name="berdasarkan_data_gejala_yang_anda_alami_maka">Berdasarkan data gejala yang anda alami \nmaka :</string>
+    <string name="ilustrasi">ilustrasi</string>
+    <string name="penjelasan_hasil_positif"><font color="#000000">Anda</font> <font color="#FF0000"><b>Berpotensi</b></font> <font color="#000000">terkena Diabetes</font></string>
+    <string name="dari_hasil_deteksi_anda_berpontesi">Dari hasil deteksi anda berpontesi</string>
+    <string name="_78">78%</string>
+    <string name="terkena_penyakit_diabtes_segera_cegah_dengan_menerapkan_pola_hidup_sehat">terkena penyakit diabtes, Segera cegah dengan menerapkan pola hidup sehat.</string>
+    <string name="hasil_deteksi_ini_hanyalah_sebagai_alat_deteksi_dini_yang_berguna_untuk_pencegahan">Hasil deteksi ini hanyalah sebagai alat deteksi dini yang berguna untuk pencegahan.</string>
+
 
     <string-array name="nameDev">
         <item>Herdi Yusli</item>

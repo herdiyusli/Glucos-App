@@ -135,7 +135,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/deteksiTittle" />
 
                 <Button
-                    android:id="@+id/button"
+                    android:id="@+id/buttonDeteksi"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -161,7 +161,7 @@
                     app:layout_constraintEnd_toEndOf="@+id/desc_diabetes"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/desc_diabetes"
-                    app:layout_constraintTop_toBottomOf="@+id/button" />
+                    app:layout_constraintTop_toBottomOf="@+id/buttonDeteksi" />
 
                 <TextView
                     android:id="@+id/txtBtnAlarm"

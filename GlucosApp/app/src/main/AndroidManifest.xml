@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.herdi.yusli.glucosapp">
 
-
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.VIBRATE" />
 
@@ -13,6 +12,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GlucosApp.Light">
+        <activity
+            android:name=".view.HasilPosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.DetectionActivity"
+            android:exported="false" />
+
         <receiver
             android:name=".alarm.AlarmReceiver"
             android:enabled="true"
