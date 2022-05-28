@@ -2,7 +2,7 @@
     <string name="app_name">Glucos App</string>
     <string name="glucos_app">Glucos App</string>
     <string name="logo_app">logo app</string>
-    <string name="created_by"><font color="#000000">Created By</font> <font color="#5200FF">Glucos Team</font></string>
+    <string name="created_by"><font color="#000000">Created By</font> <font color="#103C60">Glucos Team</font></string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="login">LOGIN</string>
@@ -71,6 +71,20 @@
     <string name="_78">78%</string>
     <string name="terkena_penyakit_diabtes_segera_cegah_dengan_menerapkan_pola_hidup_sehat">terkena penyakit diabtes, Segera cegah dengan menerapkan pola hidup sehat.</string>
     <string name="hasil_deteksi_ini_hanyalah_sebagai_alat_deteksi_dini_yang_berguna_untuk_pencegahan">Hasil deteksi ini hanyalah sebagai alat deteksi dini yang berguna untuk pencegahan.</string>
+    <string name="apakah_anda_mengalami_poliuria_npoliuria_adalah_kondisi_ketika_seseorang_buang_air_kecil_lebih_sering_dibanding_hari_biasanya">Apakah anda mengalami Polyuria? \nPolyuria adalah kondisi ketika seseorang buang air kecil lebih sering dibanding hari biasanya.</string>
+    <string name="apakah_anda_mengalami_polydipsia_atau_merasakan_haus_yang_berlebihan">Apakah Anda Mengalami Polydipsia atau merasakan haus yang berlebihan?</string>
+    <string name="apakah_berat_badan_anda_tiba_tiba_mengalami_penurunan_yang_drastis">Apakah berat badan anda tiba-tiba mengalami penurunan yang drastis?</string>
+    <string name="apakah_anda_tubuh_anda_sering_terasa_lemas">Apakah anda tubuh anda sering terasa lemas?</string>
+    <string name="apakah_anda_merasakan_gejala_polyphagia_dimana_anda_mengalami_rasa_lapar_berlebihan_atau_peningkatan_nafsu_makan_lebih_dari_biasanya">Apakah anda merasakan gejala Polyphagia, dimana anda mengalami rasa lapar berlebihan atau peningkatan nafsu makan lebih dari biasanya?</string>
+    <string name="apakah_anda_mengalami_genital_trush_atau_infeksi_jamur_pada_daerah_kemaluan">Apakah anda mengalami Genital Trush atau infeksi jamur pada daerah kemaluan?</string>
+    <string name="apakah_anda_mengalami_pengaburan_pada_penglihatan_anda">Apakah anda mengalami pengaburan pada penglihatan anda?</string>
+    <string name="apakah_anda_sering_merasakan_gatal_pada_kulit_anda">Apakah anda sering merasakan gatal pada kulit anda?</string>
+    <string name="apakah_anda_mengalami_gangguan_emosional_seperti_mudah_marah">Apakah anda mengalami gangguan emosional seperti mudah marah?</string>
+    <string name="jika_anda_mengalami_luka_apakah_luka_tersebut_sulit_atau_lama_untuk_pulih">Jika anda mengalami luka apakah luka tersebut sulit atau lama untuk pulih?</string>
+    <string name="apakah_anda_mengalami_paresis_n_paresis_adalah_suatu_kondisi_ditandai_oleh_lemahnya_gerak_badan_atau_hilangnya_sebagian_gerakan_badan">Apakah anda mengalami Paresis? \n Paresis adalah suatu kondisi ditandai oleh lemahnya gerak badan, atau hilangnya sebagian gerakan badan.</string>
+    <string name="apakah_otot_anda_sering_terasa_kaku">Apakah otot anda sering terasa kaku?</string>
+    <string name="apakah_anda_mengalami_kerontokan_rambut">Apakah Anda Mengalami kerontokan Rambut?</string>
+    <string name="apakah_anda_memiliki_kelebihan_berat_badan_atau_obesitas">Apakah anda memiliki kelebihan berat badan atau obesitas?</string>
 
 
     <string-array name="nameDev">
@@ -79,7 +93,6 @@
         <item>Surya Herdiansyah</item>
         <item>Mohammad Aldrin Arifin</item>
         <item>Wahdina Azizah</item>
-        <item>T. Imam Suranda</item>
     </string-array>
 
     <string-array name="email">
@@ -88,7 +101,6 @@
         <item>suryaherdiansyah4@gmail.com</item>
         <item tools:ignore="Typos">aldrinarifin1@gmail.com</item>
         <item>wahdinaazizah457@gmail.com</item>
-        <item>imamsuranda@gmail.com</item>
     </string-array>
 
     <string-array name="role">
@@ -97,11 +109,9 @@
         <item>Machine Learning</item>
         <item>Machine Learning</item>
         <item>Cloud Computing</item>
-        <item>Cloud Computing</item>
     </string-array>
 
     <string-array name="foto">
-        <item>@drawable/logo</item>
         <item>@drawable/logo</item>
         <item>@drawable/logo</item>
         <item>@drawable/logo</item>
