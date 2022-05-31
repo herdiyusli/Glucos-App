@@ -1,11 +1,13 @@
 package com.herdi.yusli.glucosapp.view.fragment.home
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
@@ -16,16 +18,20 @@ import com.herdi.yusli.glucosapp.data.Malam
 import com.herdi.yusli.glucosapp.data.Pagi
 import com.herdi.yusli.glucosapp.data.Siang
 import com.herdi.yusli.glucosapp.databinding.FragmentHomeBinding
+import com.herdi.yusli.glucosapp.preference.AuthPreference
+import com.herdi.yusli.glucosapp.preference.AuthViewModelFactory
 import com.herdi.yusli.glucosapp.preference.HomePreference
 import com.herdi.yusli.glucosapp.preference.HomeVMFactory
+import com.herdi.yusli.glucosapp.rensponse.LoginData
 import com.herdi.yusli.glucosapp.view.AlarmActivity
 import com.herdi.yusli.glucosapp.view.DetectionActivity
 import com.herdi.yusli.glucosapp.view.LoginActivity
+import com.herdi.yusli.glucosapp.viewModel.AuthViewModel
 import java.util.*
 
 
 class HomeFragment : Fragment() {
-    private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "catatan")
+    private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "home")
 
     private var _binding: FragmentHomeBinding? = null
 
@@ -39,6 +45,7 @@ class HomeFragment : Fragment() {
 
 
 
+    @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -48,12 +55,28 @@ class HomeFragment : Fragment() {
         val homeViewModel =
             ViewModelProvider(this, HomeVMFactory(pref))[HomeViewModel::class.java]
 
+        val pref2 = AuthPreference.getInstance(requireContext().dataStore)
+        val authViewModel =
+            ViewModelProvider(this, AuthViewModelFactory(pref2))[AuthViewModel::class.java]
+
+
+        authViewModel.getData().observe(viewLifecycleOwner)
+        { loginData: LoginData ->
+            if (loginData.token != "") {
+                binding.TvNama.text = loginData.name
+            } else {
+                binding.TvNama.text = "Tamu"
+            }
+        }
+
 
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         binding.btnLogout.setOnClickListener {
+            authViewModel.saveData(LoginData("",""))
+            Toast.makeText(getActivity(),"Berhasil Logout",Toast.LENGTH_SHORT).show()
             val intent = Intent(activity, LoginActivity::class.java)
             startActivity(intent)
             requireActivity().finish()

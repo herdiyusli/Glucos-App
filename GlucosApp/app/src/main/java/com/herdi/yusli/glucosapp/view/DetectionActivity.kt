@@ -1,20 +1,13 @@
 package com.herdi.yusli.glucosapp.view
 
 import android.annotation.SuppressLint
-import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.view.inputmethod.EditorInfo
-import android.widget.EditText
 import android.widget.RadioButton
-import android.widget.RadioGroup
 import android.widget.TextView.OnEditorActionListener
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.herdi.yusli.glucosapp.R
 import com.herdi.yusli.glucosapp.databinding.ActivityDetectionBinding
-import com.herdi.yusli.glucosapp.ml.NnModel
 import com.herdi.yusli.glucosapp.ml.NnModel2
 import org.tensorflow.lite.DataType
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer
@@ -184,7 +177,7 @@ class DetectionActivity : AppCompatActivity() {
             //            finish()
             binding.Pertanyaan.setText(outputFeature0[0].toString())
             binding.Pertanyaan2.setText(input1.toString() + "\n" + input2.toString() + "\n" + input3.toString() +"\n" + input4.toString() +"\n" + input5.toString() +"\n" + input6.toString() +"\n" + input7.toString() +"\n" + input8.toString() +"\n" + input9.toString() +"\n" + input10.toString() +"\n" + input11.toString() +"\n" + input12.toString() +"\n" + input13.toString() +"\n" + input14.toString() +"\n" + input15.toString() +"\n" + input16.toString())
-            Toast.makeText(this, "$input2", Toast.LENGTH_LONG).show()
+//            Toast.makeText(this, "$input2", Toast.LENGTH_LONG).show()
 
             model.close()
 
