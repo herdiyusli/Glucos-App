@@ -1,17 +1,21 @@
 package com.herdi.yusli.glucosapp.view
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.RadioButton
 import android.widget.TextView.OnEditorActionListener
 import androidx.appcompat.app.AppCompatActivity
 import com.herdi.yusli.glucosapp.databinding.ActivityDetectionBinding
-import com.herdi.yusli.glucosapp.ml.NnModel2
+import com.herdi.yusli.glucosapp.ml.Model
 import org.tensorflow.lite.DataType
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer
 import java.nio.ByteBuffer
+import java.nio.ByteOrder
 
 
 class DetectionActivity : AppCompatActivity() {
@@ -32,6 +36,33 @@ class DetectionActivity : AppCompatActivity() {
             false
         })
 
+        binding.apply {
+            buttonMulaiDeteksi.isEnabled = false
+            binding.inputUmur.error = "Anda harus memasukan umur anda."
+            val editTexts = listOf(inputUmur)
+            for (editText in editTexts) {
+                editText.addTextChangedListener(object : TextWatcher {
+                    override fun onTextChanged(
+                        s: CharSequence,
+                        start: Int,
+                        before: Int,
+                        count: Int
+                    ) {
+                        val umur = inputUmur.text.toString().trim()
+                        buttonMulaiDeteksi.isEnabled = isValidAge(umur)
+                        binding.textInputLayoutUmur.isErrorEnabled = false
+                    }
+                    override fun beforeTextChanged(
+                        s: CharSequence, start: Int, count: Int, after: Int
+                    ) {
+                    }
+                    override fun afterTextChanged(
+                        s: Editable
+                    ) {
+                    }
+                })
+            }
+        }
 
 
 
@@ -40,8 +71,7 @@ class DetectionActivity : AppCompatActivity() {
 
 
         binding.buttonMulaiDeteksi.setOnClickListener {
-            var umur = binding.inputUmur.text.toString()
-//        var input1 = umur?.text?.toString()?.toFloat() ?: "9"
+            val umur = binding.inputUmur.text.toString()
             val rg = binding.radioGrup
             val radiovalue =
                 (findViewById<View>(rg.checkedRadioButtonId) as? RadioButton)?.text.toString()
@@ -145,6 +175,7 @@ class DetectionActivity : AppCompatActivity() {
             val input16 = gejala14.toFloat()
 
             val byteBuffer: ByteBuffer = ByteBuffer.allocateDirect(4 * 16)
+            byteBuffer.order(ByteOrder.nativeOrder())
             byteBuffer.putFloat(input1)
             byteBuffer.putFloat(input2)
             byteBuffer.putFloat(input3)
@@ -163,28 +194,38 @@ class DetectionActivity : AppCompatActivity() {
             byteBuffer.putFloat(input16)
 
 
-            val model = NnModel2.newInstance(this)
 
-            // Creates inputs for reference.
+            val model = Model.newInstance(this)
+
             val inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, 16), DataType.FLOAT32)
             inputFeature0.loadBuffer(byteBuffer)
 
-            // Runs model inference and gets result.
+
             val outputs = model.process(inputFeature0)
             val outputFeature0 = outputs.outputFeature0AsTensorBuffer.floatArray
-            //            val intent = Intent(this, HasilPosActivity::class.java)
-            //            startActivity(intent)
-            //            finish()
-            binding.Pertanyaan.setText(outputFeature0[0].toString())
-            binding.Pertanyaan2.setText(input1.toString() + "\n" + input2.toString() + "\n" + input3.toString() +"\n" + input4.toString() +"\n" + input5.toString() +"\n" + input6.toString() +"\n" + input7.toString() +"\n" + input8.toString() +"\n" + input9.toString() +"\n" + input10.toString() +"\n" + input11.toString() +"\n" + input12.toString() +"\n" + input13.toString() +"\n" + input14.toString() +"\n" + input15.toString() +"\n" + input16.toString())
-//            Toast.makeText(this, "$input2", Toast.LENGTH_LONG).show()
+
+            if (outputFeature0[1] > 0.5) {
+                Intent(this, HasilPosActivity::class.java).also {
+                    it.putExtra(HasilPosActivity.EXTRA_HASIL, outputFeature0[1].toString())
+                    startActivity(it)
+                }
+            } else {
+                val intent = Intent(this, HasilNegActivity::class.java)
+                startActivity(intent)
+            }
+
+            byteBuffer.clear()
 
             model.close()
-
         }
 
-// Releases model resources if no longer used.
-
-
     }
+    private fun isValidAge(age: CharSequence): Boolean {
+        if (age.isEmpty()) {
+            binding.textInputLayoutUmur.error = "Anda harus memasukan umur anda"
+            return false
+        }
+        return true
+    }
+
 }

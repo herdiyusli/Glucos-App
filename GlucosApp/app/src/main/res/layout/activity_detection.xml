@@ -79,12 +79,13 @@
                 android:paddingBottom="150dp">
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/textInputLayout"
+                    android:id="@+id/textInputLayoutUmur"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     app:boxStrokeColor="@color/brown"
                     app:hintTextColor="@color/black"
+                    app:errorEnabled="true"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
@@ -112,7 +113,7 @@
                     android:textColor="@color/black"
                     android:textSize="14sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayoutUmur" />
 
                 <RadioGroup
                     android:id="@+id/radioGrup"
@@ -120,8 +121,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
-                    app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
-                    app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+                    app:layout_constraintEnd_toEndOf="@+id/textInputLayoutUmur"
+                    app:layout_constraintStart_toStartOf="@+id/textInputLayoutUmur"
                     app:layout_constraintTop_toBottomOf="@+id/pilihgenderTv">
 
                     <RadioButton
@@ -129,6 +130,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:buttonTint="@color/brown"
+                        android:checked="true"
                         android:paddingHorizontal="8dp"
                         android:text="@string/pria" />
 

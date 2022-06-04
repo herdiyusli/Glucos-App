@@ -67,6 +67,7 @@
     <string name="berdasarkan_data_gejala_yang_anda_alami_maka">Berdasarkan data gejala yang anda alami \nmaka :</string>
     <string name="ilustrasi">ilustrasi</string>
     <string name="penjelasan_hasil_positif"><font color="#000000">Anda</font> <font color="#FF0000"><b>Berpotensi</b></font> <font color="#000000">terkena Diabetes</font></string>
+    <string name="penjelasan_hasil_negatif"><font color="#000000">Untuk saat ini anda</font> <font color="#75C44C"><b>tidak berpotensi</b></font> <font color="#000000">\nterkena Diabetes</font></string>
     <string name="dari_hasil_deteksi_anda_berpontesi">Dari hasil deteksi anda berpontesi</string>
     <string name="_78">78%</string>
     <string name="terkena_penyakit_diabtes_segera_cegah_dengan_menerapkan_pola_hidup_sehat">terkena penyakit diabtes, Segera cegah dengan menerapkan pola hidup sehat.</string>
@@ -85,6 +86,7 @@
     <string name="apakah_otot_anda_sering_terasa_kaku">Apakah otot anda sering terasa kaku?</string>
     <string name="apakah_anda_mengalami_kerontokan_rambut">Apakah anda mengalami kerontokan Rambut?</string>
     <string name="apakah_anda_memiliki_kelebihan_berat_badan_atau_obesitas">Apakah anda memiliki kelebihan berat badan atau obesitas?</string>
+    <string name="tetap_terapkan_pola_hidup_sehat_dan_pola_makan_yang_teratur_untuk_terus_menjaga_kesehatan_pada_diri_anda">Tetap terapkan pola hidup sehat dan pola makan yang teratur untuk terus menjaga kesehatan pada diri anda.</string>
 
 
     <string-array name="nameDev">
