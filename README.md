@@ -20,10 +20,11 @@ The COVID-19 pandemic has made every activity shift from offline to online. Work
   <img src="https://github.com/herdiyusli/Glucos-App/blob/main/images/mockup/splash_google-pixel4-justblack-portrait.png" width="270" height="540">
   <img src="https://github.com/herdiyusli/Glucos-App/blob/main/images/mockup/home_google-pixel4-justblack-portrait.png" width="270" height="540">
   <img src="https://github.com/herdiyusli/Glucos-App/blob/main/images/mockup/positif_google-pixel4-justblack-portrait.png" width="270" height="540">
-</p>
+</p></br>
 
 
 ## Glucos Team C22-PC403
+Our Repository click role of member
 #### [Machine Learning](https://github.com/suryah-11/GlucosApp-ML):
 * M2004F0190 - Paskalis Sinurat
 * M2281G2418 - Surya Herdiansyah
@@ -33,33 +34,32 @@ The COVID-19 pandemic has made every activity shift from offline to online. Work
 * A2009G0970 - Herdi Yusli
 
 #### [Cloud Computing](https://github.com/WAHDINAAZIZAH/CC-GlucosApp):
-* C2427F3003 - Wahdina Azizah
+* C2427F3003 - Wahdina Azizah</br>
 
 
 ## Installation
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/naufalhakim23/Medicare-GotongRoyong.git
+   git clone https://github.com/herdiyusli/Glucos-App.git
    ```
-2. Open folder GlucosApp to Android Studio
+2. Open folder GlucosApp to Android Studio</br>
 
 
-## Built With
-Major frameworks that used in the project
+## Tools, Library & Frameworks
 * [Tensorflow](https://www.tensorflow.org/)
 * [Laravel](https://laravel.com/)
 * [Google Cloud Platform](https://cloud.google.com/)
 * [Android Studio](https://developer.android.com/studio)
 * [Kotlin](https://kotlinlang.org/)
-* [Retrofit](https://square.github.io/retrofit/)
+* [Retrofit](https://square.github.io/retrofit/)</br>
 
 
 ## Links
 * [APK](#)
 * [Wireframe](https://www.figma.com/file/MRTE9MHb7sstnkMwLFXR6P/GlucoseApp?node-id=0%3A1)  
 * [Mockup](https://www.figma.com/file/MRTE9MHb7sstnkMwLFXR6P/GlucoseApp?node-id=417%3A2)
-* [Figma Prototype](https://www.figma.com/proto/MRTE9MHb7sstnkMwLFXR6P/GlucoseApp?node-id=456%3A2&scaling=min-zoom&page-id=421%3A420&starting-point-node-id=421%3A666)
+* [Figma Prototype](https://www.figma.com/proto/MRTE9MHb7sstnkMwLFXR6P/GlucoseApp?node-id=456%3A2&scaling=min-zoom&page-id=421%3A420&starting-point-node-id=421%3A666)</br>
 
 
 ## References
