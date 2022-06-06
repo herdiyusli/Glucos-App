@@ -33,9 +33,8 @@ class BantuanFragment : Fragment() {
     ): View {
 
         _binding = FragmentBantuanBinding.inflate(inflater, container, false)
-        val root: View = binding.root
 
-        return root
+        return binding.root
     }
 
 

@@ -76,7 +76,7 @@ class HomeFragment : Fragment() {
 
         binding.btnLogout.setOnClickListener {
             authViewModel.saveData(LoginData("",""))
-            Toast.makeText(getActivity(),"Berhasil Logout",Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity,"Berhasil Logout",Toast.LENGTH_SHORT).show()
             val intent = Intent(activity, LoginActivity::class.java)
             startActivity(intent)
             requireActivity().finish()
