@@ -43,7 +43,8 @@ Our Repository click role of member
    ```sh
    git clone https://github.com/herdiyusli/Glucos-App.git
    ```
-2. Open folder GlucosApp to Android Studio</br>
+2. Open folder GlucosApp to Android Studio
+3. Run the project with your emulator or android phone</br>
 
 
 ## Tools, Library & Frameworks
