@@ -11,7 +11,7 @@ import android.widget.RadioButton
 import android.widget.TextView.OnEditorActionListener
 import androidx.appcompat.app.AppCompatActivity
 import com.herdi.yusli.glucosapp.databinding.ActivityDetectionBinding
-import com.herdi.yusli.glucosapp.ml.Model
+import com.herdi.yusli.glucosapp.ml.Model2
 import org.tensorflow.lite.DataType
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer
 import java.nio.ByteBuffer
@@ -195,7 +195,7 @@ class DetectionActivity : AppCompatActivity() {
 
 
 
-            val model = Model.newInstance(this)
+            val model = Model2.newInstance(this)
 
             val inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, 16), DataType.FLOAT32)
             inputFeature0.loadBuffer(byteBuffer)
