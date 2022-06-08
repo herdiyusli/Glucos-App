@@ -16,7 +16,7 @@ import android.widget.Toast
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import com.herdi.yusli.glucosapp.R
-import com.herdi.yusli.glucosapp.view.LoginActivity
+import com.herdi.yusli.glucosapp.view.MainActivity
 import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.*
@@ -74,12 +74,13 @@ class AlarmReceiver : BroadcastReceiver() {
         val notificationManagerCompat =
             context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         val alarmSound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
-        val loginIntent = Intent(context, LoginActivity::class.java)
+        val mainIntent = Intent(context, MainActivity::class.java)
+        mainIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         val pendingIntent = PendingIntent.getActivity(
             context,
             0,
-            loginIntent,
-            PendingIntent.FLAG_CANCEL_CURRENT
+            mainIntent,
+            PendingIntent.FLAG_CANCEL_CURRENT,
         )
 
 

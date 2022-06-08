@@ -57,7 +57,7 @@ Our Repository click role of member
 
 
 ## Links
-* [APK](https://drive.google.com/file/d/1GkIS-7ro2QuJseyP7XAren_skHKBxtpu/view?usp=sharing)
+* [APK](https://drive.google.com/file/d/101zoEk4CAvgYpgTTF4riIKQRJY9YmR_x/view?usp=sharing)
 * [Wireframe](https://www.figma.com/file/MRTE9MHb7sstnkMwLFXR6P/GlucoseApp?node-id=0%3A1)  
 * [Mockup](https://www.figma.com/file/MRTE9MHb7sstnkMwLFXR6P/GlucoseApp?node-id=417%3A2)
 * [Figma Prototype](https://www.figma.com/proto/MRTE9MHb7sstnkMwLFXR6P/GlucoseApp?node-id=456%3A2&scaling=min-zoom&page-id=421%3A420&starting-point-node-id=421%3A666)</br>
