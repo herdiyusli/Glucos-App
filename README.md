@@ -65,5 +65,17 @@ Our Repository click role of member
 
 ## References
 * [Early Diabetes Classification Dataset](https://www.kaggle.com/datasets/andrewmvd/early-diabetes-classification)
-* [Journal Reference - Diabetic during pandemic](https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2781811)
+* [Journal Reference - Diabetic during pandemic](https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2781811)</br>
+
+## Android Library
+* Retrofit
+* Datastore
+* Preferences
+* Material Design
+* MVVM Architecture (Model–View–ViewModel)
+* Datastore Preferences
+* ViewBinding
+* LiveData
+* TensorFlow Lite
+
 
